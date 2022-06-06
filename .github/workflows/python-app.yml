@@ -28,4 +28,7 @@ jobs:
     - name: Check installed Python libraries
       run: pip freeze
     - name: print secret key
-      run : console.log(secrets.PAIKO);
+      env:
+        HOGE: ${{secrets.PAIKO}}
+      run:
+        echo "key = ${{secrets.PAIKO}}"
