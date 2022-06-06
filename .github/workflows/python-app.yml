@@ -24,5 +24,4 @@ jobs:
           pip install isort black
     - name: Lint
       run: |
-          isort --check --diff .
-          black --check --line-length ${MAX_LINE_LENGTH} .
+          black --check --line-length 120 .
